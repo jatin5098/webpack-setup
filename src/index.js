@@ -10,3 +10,10 @@ function component () {
 }
 
 document.body.appendChild(component());
+
+class EcmaSix {
+  constructor() {
+    this.a = 10;
+    this.b = 20;
+  }
+}
