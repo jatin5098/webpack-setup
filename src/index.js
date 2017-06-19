@@ -101,4 +101,31 @@ Promise.all([
 	aPromise()
 ]).then((data) => {
     console.log(data);
-});     
+});
+
+
+//Callbacks
+// define our function with the callback argument
+some_function = (arg1, arg2, callback) => {
+  // this generates a random number between
+  // arg1 and arg2
+  var my_number = arg1 + arg2;
+  // then we're done, so we'll call the callback and
+  // pass our result
+  callback(my_number);
+}
+// call the function
+some_function(5, 15, (num) => {
+  // this anonymous function will run when the
+  // callback is called
+  console.log("callback called! " + num);
+});
+
+
+// 
+let testCallback = (agr1, arg2, callback) => {
+	callback(agr1 + arg2);
+}
+testCallback(4, 6, function(data) {
+	console.log('Callback called ' + data);
+})
