@@ -1,4 +1,7 @@
-import _ from 'lodash';
+// scss
+import './css/main.scss';
+
+// import _ from 'lodash';
 
 function component () {
   var element = document.createElement('div');
@@ -87,13 +90,14 @@ var aPromise = () => {
         }, 300);
 	});
 }
-aPromise().then(aPromise())
-        .then(aPromise())
-        .then(aPromise())
-        .then(aPromise())
-        .then((data) => {
-            console.log(data);
-        });
+aPromise()
+  .then(aPromise())
+  .then(aPromise())
+  .then(aPromise())
+  .then(aPromise())
+  .then((data) => {
+      console.log(data);
+  });
 
 Promise.all([
   aPromise(),
